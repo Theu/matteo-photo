@@ -5,13 +5,15 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import registerServiceWorker from './registerServiceWorker';
 
+import './index.css'
+
 import Homepage from './Homepage';
-import Header from './components/Header/Header';
+import Header from './components/header/Header';
 
 render(
     <Router>
-    <div>
-        <Header />    
+    <div className='wrapper-index'>
+        <Header />
         <Homepage />
     </div>
     </Router>
