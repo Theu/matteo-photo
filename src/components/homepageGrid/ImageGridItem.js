@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import './gridItem.css';
+import './imageGridItem.css';
 
-class GridItem extends PureComponent {
+class ImageGridItem extends PureComponent {
 
     static propTypes = {
         src: PropTypes.string,
@@ -19,15 +19,13 @@ class GridItem extends PureComponent {
         } = this.props;
 
         return (
-            <div className='grid-item-wrapper'>
             <img 
                 src={src} 
                 alt={alt} 
-                title={title}
+                tiytle={title}
                 className='grid-item-wrapper' />
-        </div>
         );
     };
 };
 
-export default GridItem;
+export default ImageGridItem;
