@@ -15,10 +15,10 @@ class HomePageGrid extends PureComponent {
     render() {
 
         return (
-            imagesHp.map(key => {
+            imagesHp.map((key, index) => {
                 return (
                     <GridItem
-                        key={key.title} 
+                        key={index} 
                         src={key.imgSrc}
                         alt={key.title}
                         title={key.title}

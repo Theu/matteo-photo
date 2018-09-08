@@ -12,8 +12,8 @@ import Header from './components/header/Header';
 
 render(
     <Router>
-    <div>
-        <Header />    
+    <div className='wrapper-index'>
+        <Header />
         <Homepage />
     </div>
     </Router>

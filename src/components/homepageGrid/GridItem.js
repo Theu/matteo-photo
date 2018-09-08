@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+import './gridItem.css';
+
 class GridItem extends PureComponent {
 
     static propTypes = {
@@ -17,11 +19,12 @@ class GridItem extends PureComponent {
         } = this.props;
 
         return (
-            <div>
+            <div className='grid-item-wrapper'>
             <img 
                 src={src} 
                 alt={alt} 
-                title={title} />
+                title={title}
+                className='grid-item-wrapper' />
         </div>
         );
     };

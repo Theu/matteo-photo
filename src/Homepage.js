@@ -8,7 +8,7 @@ import './homepage.css';
 class App extends PureComponent {
   render() {
     return (
-      <div className="App">
+      <div className="wrapper-homepage">
         <HomePageGrid />
       </div>
     );
