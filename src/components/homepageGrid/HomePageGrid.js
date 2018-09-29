@@ -23,7 +23,7 @@ class HomePageGrid extends PureComponent {
             
             imagesHp.map((key, index) => {
                 return (
-                    <Link to={`${baseUrl}${key.serie}`}>
+                    <Link to={`${key.serie}`}>
                         <GridItem
                             key={index} 
                             src={key.imgSrc}
