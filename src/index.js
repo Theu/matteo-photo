@@ -7,15 +7,13 @@ import registerServiceWorker from './registerServiceWorker';
 
 import './index.css'
 
-import Homepage from './Homepage';
-import Header from './components/header/Header';
+import App from './App';
+// import Homepage from './Homepage';
+// import Header from './components/Header/Header';
 
 render(
     <Router>
-    <div className='wrapper-index'>
-        <Header />
-        <Homepage />
-    </div>
+        <App />
     </Router>
     , document.getElementById('root')
 );
