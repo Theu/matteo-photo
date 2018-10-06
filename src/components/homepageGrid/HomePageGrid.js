@@ -8,8 +8,6 @@ import GridItem from './GridItem';
 
 import { imagesHp } from '../../images/index';
 
-const baseUrl = 'http://www.matteocontini.com/'
-
 class HomePageGrid extends PureComponent {
     
     static propTypes = {
@@ -23,23 +21,18 @@ class HomePageGrid extends PureComponent {
             
             imagesHp.map((key, index) => {
                 return (
-                    <Link to={`${key.serie}`}>
-                        <GridItem
-                            key={index} 
+                    <Link to={`${key.serie}`} key={index}>
+                        <GridItem     
                             src={key.imgSrc}
                             alt={key.title}
                             title={key.title}
                             name={key.name}
-                            getGalleryName={() => {this.getName}}
                         />
                     </Link>
                 )
             })
             
         )
-    }
-    getName = (event) => {
-        console.log('PASSO', event.target.name);
     }
 };
 

@@ -1,10 +1,10 @@
 import React from 'react';
-
+import Slider from '../slider/Slider';
 
 const CrystalFrontiers = () => {
     return (
         <div>
-            CrystalFrontiers
+            <Slider />
         </div>
     );
 }
