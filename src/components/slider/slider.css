@@ -1,0 +1,14 @@
+.slider {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    border: 1px solid green;
+    overflow: hidden;
+  white-space: nowrap;
+}
+
+.slider-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
