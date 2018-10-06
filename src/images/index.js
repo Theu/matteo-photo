@@ -1,91 +1,65 @@
-import _MG_4698 from '../assets/img/hp/_MG_4698.jpg';
-import _MG_4699 from '../assets/img/hp/_MG_4699.jpg';
-import _MG_4700 from '../assets/img/hp/_MG_4700.jpg';
-import _MG_4701 from '../assets/img/hp/_MG_4701.jpg';
-import _MG_4702 from '../assets/img/hp/_MG_4702.jpg';
-import _MG_4703 from '../assets/img/hp/_MG_4703.jpg';
-import _MG_4704 from '../assets/img/hp/_MG_4704.jpg';
-import _MG_4705 from '../assets/img/hp/_MG_4705.jpg';
-import _MG_4939 from '../assets/img/hp/_MG_4939.jpg';
+import img_01_72 from '../assets/img/hp/01_72.jpg';
+import img_02_72 from '../assets/img/hp/02_72.jpg';
+import img_03_72 from '../assets/img/hp/03_72.jpg';
+import img_04_72 from '../assets/img/hp/04_72.jpg';
+import img_05_72 from '../assets/img/hp/05_72.jpg';
+import img_06_72 from '../assets/img/hp/06_72.jpg';
+import img_07_72 from '../assets/img/hp/07_72.jpg';
+import img_08_72 from '../assets/img/hp/08_72.jpg';
+import img_09_72 from '../assets/img/hp/09_72.jpg';
+import img_10_72 from '../assets/img/hp/10_72.jpg';
+import img_11_72 from '../assets/img/hp/11_72.jpg';
 
 
 const imagesHp = [
     {
         title: '01',
-        imgSrc: _MG_4698,
+        imgSrc: img_01_72,
         name: 'testPage01',
         serie: 'crystalFrontiers'
     },
     {
         title: '02',
-        imgSrc: _MG_4699,
+        imgSrc: img_02_72,
         name: 'testPage02',
         serie: 'newYork'
     },
     {
         title: '03',
-        imgSrc: _MG_4700,
+        imgSrc: img_03_72,
         name: 'testPage01'
     },
     {
         title: '04',
-        imgSrc: _MG_4701
+        imgSrc: img_04_72
     },
     {
         title: '05',
-        imgSrc: _MG_4702
-    },
-    {
-        title: 'vert',
-        imgSrc: _MG_4939
+        imgSrc: img_05_72
     },
     {
         title: '06',
-        imgSrc: _MG_4703
+        imgSrc: img_06_72
     },
     {
         title: '07',
-        imgSrc: _MG_4704
+        imgSrc: img_07_72
     },
     {
         title: '08',
-        imgSrc: _MG_4705
+        imgSrc: img_08_72
     },
     {
-        title: '01',
-        imgSrc: _MG_4698
+        title: '09',
+        imgSrc: img_09_72
     },
     {
-        title: '02',
-        imgSrc: _MG_4699
+        title: '10',
+        imgSrc: img_10_72
     },
     {
-        title: '03',
-        imgSrc: _MG_4700
-    },
-    {
-        title: '04',
-        imgSrc: _MG_4701
-    },
-    {
-        title: '05',
-        imgSrc: _MG_4702
-    },
-    {
-        title: 'vert',
-        imgSrc: _MG_4939
-    },
-    {
-        title: '06',
-        imgSrc: _MG_4703
-    },
-    {
-        title: '07',
-        imgSrc: _MG_4704
-    },
-    {
-        title: '08',
-        imgSrc: _MG_4705
+        title: '11',
+        imgSrc: img_11_72
     }
 ];
 
