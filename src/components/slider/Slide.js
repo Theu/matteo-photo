@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './slide.css';
+import './slider.css';
 
 // HI, I am a functional Component
 const Slide = ({ image }) => { 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './arrows.css';
+import './slider.css';
 
 const LeftArrow = (props) => {
     return (
@@ -8,7 +8,7 @@ const LeftArrow = (props) => {
             className='backArrow'
             onClick={props.goToPrevSlide}
         >
-            back
+            &lt;
         </div>
     );
 };

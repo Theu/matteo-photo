@@ -1,0 +1,6 @@
+.gallery-wrapper {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}

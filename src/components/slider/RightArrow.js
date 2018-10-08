@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './arrows.css';
+import './slider.css';
 
 const RightArrow = (props) => {
     return (
@@ -8,7 +8,7 @@ const RightArrow = (props) => {
             className='nextArrow'
             onClick={props.goToNextSlide}
         >
-            next
+            &gt;
         </div>
     );
 };
