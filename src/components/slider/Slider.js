@@ -59,35 +59,32 @@ class Slider extends Component {
 
     render() {
         const imageSet = this.state.images;
-        
+        console.log(this.props)
         return (
-            <div>
-            <div className='slider'>
-                <div className='slider-wrapper'
-                    style={{
-                        transform: `translateX(${this.state.translateValue}px)`,
-                        transition: 'transform ease-out 0.45s'
-                }}>
-                    {
-                        imageSet.map((image, index) => (
-                            <Slide
-                                key={index}
-                                image={image}
-                            />
-                        ))
-                    }
-                </div>
-
-                
-            </div>
-            <LeftArrow
+            <React.Fragment>
+                <LeftArrow
                     goToPrevSlide={this.goToPrevSlide}
                 />
-                
-            <RightArrow
-                goToNextSlide={this.goToNextSlide}
-            />
-            </div>
+                <div className='slider'>
+                    <div className='slider-wrapper'
+                        style={{
+                            transform: `translateX(${this.state.translateValue}px)`,
+                            transition: 'transform ease-out 0.35s'
+                    }}>
+                        {
+                            imageSet.map((image, index) => (
+                                <Slide
+                                    key={index}
+                                    image={image}
+                                />
+                            ))
+                        }
+                    </div>   
+                </div>
+                <RightArrow
+                    goToNextSlide={this.goToNextSlide}
+                /> 
+            </React.Fragment>
         );
     }
 };

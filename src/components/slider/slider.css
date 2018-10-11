@@ -1,14 +1,36 @@
 .slider {
     position: relative;
-    width: 700px;
-    height: 700px;
-    border: 1px solid green;
+    max-width: 1284px;
+    height: 856px;
     overflow: hidden;
-  white-space: nowrap;
+    white-space: nowrap;
+    margin: 25px auto
 }
 
 .slider-wrapper {
     position: relative;
-    height: 100%;
     width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: inline-block;
+    width: 1284px;
+    height: 100%;
+}
+
+.backArrow, .nextArrow {
+    /* height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9;
+    border-radius: 50%;
+    
+    transition: transform ease-in .1s;
+    color: brown;
+    border: 1px solid red */
+    font-size: 25px;
+    cursor: pointer;
 }
