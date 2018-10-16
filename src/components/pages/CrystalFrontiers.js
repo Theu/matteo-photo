@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Slider from '../slider/Slider';
 
-import './gallery.css';
+import '../slider/slider.css';
 
 class CrystalFrontiers extends Component {
     render() {
