@@ -68,7 +68,11 @@
         width: 95%;
         margin: 0 auto;
     }
-
+    
+    .slider {
+        overflow: auto;
+    }
+    
     .slide-image {
         background-size: contain;
         background-repeat: no-repeat;
@@ -85,8 +89,12 @@
     .gallery-wrapper {
         display: flex;
         align-items: center;
-        width: 95%;
-        margin: 0 auto;
+        width: 310px;
+        margin: 0 5px;
+    }
+
+    .slider {
+        overflow: auto;
     }
 
     .slide {
@@ -102,8 +110,9 @@
     }
 
     .slide-image {
-        width: 320px;
+        width: 310px;
         height: 218px;
+        display: inline-table;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: initial;
