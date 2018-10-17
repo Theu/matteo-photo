@@ -1,7 +1,7 @@
 .gallery-wrapper {
     display: flex;
     align-items: center;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -72,7 +72,7 @@
     .slider {
         overflow: auto;
     }
-    
+
     .slide-image {
         background-size: contain;
         background-repeat: no-repeat;
