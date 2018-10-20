@@ -37,18 +37,27 @@
     cursor: pointer;
 }
 
-@media only screen and (max-width: 1023px) and (min-width: 768px) {
+@media only screen and (max-width: 1328px) and (min-width: 768px) {
     .backArrow, .nextArrow {
       display: none;
     }
-
+    
     .gallery-wrapper {
         display: flex;
         align-items: center;
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
     }
 
+    .slider {
+        position: relative;
+        max-width: 1284px;
+        height: 856px;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 25px auto
+    }
+    
     .slide-image {
         background-size: contain;
         background-repeat: no-repeat;
