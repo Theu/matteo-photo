@@ -9,8 +9,7 @@ class GridItem extends PureComponent {
         src: PropTypes.string,
         alt: PropTypes.string,
         title: PropTypes.string,
-        name: PropTypes.string,
-        getGalleryName: PropTypes.func
+        name: PropTypes.string
     }
 
     render() {
@@ -18,20 +17,18 @@ class GridItem extends PureComponent {
             src,
             alt,
             title,
-            name,
-            getGalleryName
+            name
         } = this.props;
 
         return (
             <div
-                onClick={getGalleryName}
-                className='grid-item-wrapper'>
+                className='image'>
                 <img 
                     src={src} 
                     alt={alt} 
                     title={title}
                     name={name}
-                    className='grid-item-wrapper' />
+                    className='image' />
             </div>
             
         );
