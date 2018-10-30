@@ -24,7 +24,7 @@ class HomePageGrid extends PureComponent {
     
 
     render() {
-        
+        console.log('imagesHp :', imagesHp);
         const { readPageLocation } = this.props
 
         console.log('props from App: ', this.props)

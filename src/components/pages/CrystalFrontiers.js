@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import Slider from '../slider/Slider';
-
-import '../slider/slider.css';
+import LightBox from '../lightBox/LightBox';
 
 class CrystalFrontiers extends Component {
     render() {
         return (
-            <div className='gallery-wrapper'>
-                <Slider />
+            <div>
+                <LightBox />
             </div>
         );
     }
