@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { readLocation } from '../../actions';
+import { readLocation } from '../../redux/actions/index';
 
 
 import GridItem from './GridItem';
@@ -17,17 +17,13 @@ class HomePageGrid extends PureComponent {
         readPageLocation: PropTypes.func
     };
 
-    readPageLocation = () => {
-        console.log('ECCOMI');
+    readPageLocation = (e) => {
+        console.log('ECCOMI', e.currentTarget.dataset.name);
     }
     
     
 
     render() {
-        console.log('imagesHp :', imagesHp);
-        const { readPageLocation } = this.props
-
-        console.log('props from App: ', this.props)
 
         return (
             
@@ -36,6 +32,7 @@ class HomePageGrid extends PureComponent {
                     <div 
                         onClick={this.readPageLocation}
                         key={index}
+                        data-name={key.serie}
                     >
                     <Link 
                         to={`${key.serie}`} 

@@ -9,9 +9,9 @@ import {
 
 import registerServiceWorker from './registerServiceWorker';
 
-import { createStore } from 'redux';
+// import { createStore } from 'redux';
+import configureStore from './redux/store/configureStore';
 import { Provider } from 'react-redux';
-import functionStore from './reducers';
 
 import './index.css'
 
@@ -20,7 +20,9 @@ import Homepage from './Homepage';
 import CrystalFrontiers from './components/pages/CrystalFrontiers';
 import NewYork from './components/pages/NewYork'
 
-const store = createStore(functionStore)
+const store = configureStore();
+
+console.log('store', store)
 
 render(
     <Provider store={store}>
