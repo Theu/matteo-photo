@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 
 
-import registerServiceWorker from './registerServiceWorker';
-
+// import registerServiceWorker from './registerServiceWorker';
+import { PersistGate } from 'redux-persist/integration/react';
 import configureStore from './redux/store/configureStore';
 import { Provider } from 'react-redux';
 
@@ -19,21 +19,23 @@ import Homepage from './Homepage';
 import CrystalFrontiers from './components/pages/CrystalFrontiers';
 import NewYork from './components/pages/NewYork'
 
-const store = configureStore();
+const { store, persistor } = configureStore();
 
 render(
     <Provider store={store}>
-        <Router>
-            <div>
-                <Header />
-                <Switch>
-                    <Route exact path="/" component={Homepage} />
-                    <Route path="/crystalFrontiers" component={CrystalFrontiers} />
-                    <Route path="/NewYork" component={NewYork} />
-                </Switch>
-            </div>
-        </Router>
+        <PersistGate loadind={null} persistor={persistor}>
+            <Router>
+                <div>
+                    <Header />
+                    <Switch>
+                        <Route exact path="/" component={Homepage} />
+                        <Route path="/crystalFrontiers" component={CrystalFrontiers} />
+                        <Route path="/NewYork" component={NewYork} />
+                    </Switch>
+                </div>
+            </Router>
+        </PersistGate>
     </Provider>
     , document.getElementById('root')
 );
-registerServiceWorker();
+// registerServiceWorker();

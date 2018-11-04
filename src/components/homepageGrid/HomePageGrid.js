@@ -3,7 +3,10 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getLocation } from '../../redux/actions/actionCreators.js';
+import { 
+    getLocation,
+    getImage
+ } from '../../redux/actions/actionCreators.js';
 
 
 import GridItem from './GridItem';
@@ -14,7 +17,8 @@ class HomePageGrid extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            location: ''
+            location: '',
+            id: ''
         }
     }
     
@@ -23,22 +27,31 @@ class HomePageGrid extends PureComponent {
         readPageLocation: PropTypes.func
     };
 
-    readPageLocation = (e) => {
-        this.setState({location: e.currentTarget.dataset.name});
-        this.props.getLocation(e.currentTarget.dataset.name)
+    readPageLocation = event => {
+        this.setState({location: event.currentTarget.dataset.serie});
+        this.props.getLocation(event.currentTarget.dataset.serie)
         
     }
+
+    defineFirstImageToShow = event => {
+        this.setState({location: event.currentTarget.dataset.id});
+        this.props.getImage(event.currentTarget.dataset.id)
+    }
     
-    
+    // onClick(event)
 
     render() {
         return (    
             imagesHp.map((key, index) => {
                 return (
                     <div 
-                        onClick={this.readPageLocation}
+                        onClick={(event) => {
+                            this.readPageLocation(event);
+                            this.defineFirstImageToShow(event)
+                        }}
                         key={index}
-                        data-name={key.serie}
+                        data-serie={key.serie}
+                        data-id={key.id}
                     >
                     <Link 
                         to={`${key.serie}`} 
@@ -62,7 +75,8 @@ function mapStateToProps(state) {
     return state
 }
 const mapDispatchToProps = {
-    getLocation
+    getLocation,
+    getImage
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HomePageGrid);
