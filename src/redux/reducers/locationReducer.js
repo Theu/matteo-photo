@@ -1,11 +1,14 @@
 import {
     GET_LOCATION_SUCCESS,
-    LOAD_LOCATION_SUCCESS
+    LOAD_LOCATION_SUCCESS,
+
+    GET_IMAGE_SUCCESS
 } from '../actions/actionTypes';
 
 const initialState = {
     isLoading: false,
-    location: ''
+    location: '',
+    image: ''
 };
 
 export const locationReducer = (state = initialState, action) => {
@@ -21,8 +24,15 @@ export const locationReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoading: false,
-                todos: action.payload
+                location: action.payload
             };
+
+        case GET_IMAGE_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                image: action.payload
+            }
 
         
         default:

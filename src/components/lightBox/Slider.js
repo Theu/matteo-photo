@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Image from './Image';
 
-import { getLocation } from '../../redux/actions/selectors';
+import { 
+    getLocation,
+    getImage
+ } from '../../redux/actions/selectors';
 
 import { imagesHp } from '../../images/index';
 
@@ -19,7 +22,8 @@ class Slider extends PureComponent {
 
         this.state = {
             images: imagesHp.filter(object => object.serie === this.props.locationToLoad),
-            currentIndex: 0,
+            currentIndex: imagesHp.filter(object => object.serie === this.props.locationToLoad).findIndex(element => element.id === this.props.imageToStart),
+            // currentIndex: 0,
             translateValue: 0
         }
     }
@@ -31,8 +35,7 @@ class Slider extends PureComponent {
         alt: PropTypes.string,
         title: PropTypes.string,
         name: PropTypes.string,
-        index: PropTypes.number,
-        locationToLoad: PropTypes.string
+        index: PropTypes.number
     }
 
     prevSlide = () => {
@@ -51,15 +54,16 @@ class Slider extends PureComponent {
 
     render() {
         const imageSet = this.state.images;
+        const imageIndex = this.state.currentIndex;
 
         return (
             <div>
                 <a className='prev' onClick={this.prevSlide}>&#10094;</a>    
                     <div className='display-image'>
                         <Image
-                            imgSrc={`http://localhost:3000/${imageSet[this.state.currentIndex].imgSrc}`}
-                            title={imagesHp[this.state.currentIndex].title}
-                            alt={imagesHp[this.state.currentIndex].title}
+                            imgSrc={`http://localhost:3000/${imageSet[imageIndex].imgSrc}`}
+                            title={imagesHp[imageIndex].title}
+                            alt={imagesHp[imageIndex].title}
                         />
                     </div>               
                 <a className='next' onClick={this.nextSlide}>&#10095;</a>
@@ -70,7 +74,8 @@ class Slider extends PureComponent {
 
 function mapStateToProps(state) {
     return {
-      locationToLoad: getLocation(state), 
+      locationToLoad: getLocation(state),
+      imageToStart: getImage(state)
     };
   }
 
