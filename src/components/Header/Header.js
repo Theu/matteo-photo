@@ -1,11 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './header.css';
 
 const Header = () => {
     return (
-        <div className='header-wrapper'>
-            Matteo Contini
-        </div>
+        <Link 
+            to='/'
+        >
+            <div className='header-wrapper'>
+                Matteo Contini
+            </div>
+        </Link>
     );
 }
 

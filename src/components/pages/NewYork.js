@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import LightBox from '../lightBox/LightBox';
 
-
-const NewYork = () => {
-    return (
-        <div>
-        iserire slider
-        </div>
-    );
+class NewYork extends Component {
+    render() {
+        return (
+            <div>
+                <LightBox />
+            </div>
+        );
+    }
 }
 
 export default NewYork;

@@ -1,5 +1,6 @@
 import {
-    GET_LOCATION
+    GET_LOCATION_SUCCESS,
+    LOAD_LOCATION_SUCCESS
 } from '../actions/actionTypes';
 
 const initialState = {
@@ -9,11 +10,20 @@ const initialState = {
 
 export const locationReducer = (state = initialState, action) => {
     switch(action.type) {
-        case GET_LOCATION: 
+        case GET_LOCATION_SUCCESS: 
             return {
                 ...state,
-                isLoading: true
+                isLoading: true,
+                location: action.payload
             };
+
+        case LOAD_LOCATION_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                todos: action.payload
+            };
+
         
         default:
             return state

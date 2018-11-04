@@ -1,5 +1,10 @@
-export const GET_LOCATION = 'GET_LOCATION';
+export const GET_LOCATION_SUCCESS = 'GET_LOCATION_SUCCESS';
+export const LOAD_LOCATION_SUCCESS = 'LOAD_LOCATION_SUCCESS';
 
-export const getLocation = () => ({
-    type: GET_LOCATION
+export const getLocationSuccess = () => ({
+    type: GET_LOCATION_SUCCESS
+});
+
+export const loadLocationSuccess = () => ({
+    type: LOAD_LOCATION_SUCCESS
 });

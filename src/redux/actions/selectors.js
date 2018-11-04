@@ -1,0 +1,1 @@
+export const getLocation = state => state.locations.location;
