@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { readLocation } from '../../actions';
+import { getLocation } from '../../redux/actions/actionCreators.js';
 
 
 import GridItem from './GridItem';
@@ -11,31 +11,34 @@ import GridItem from './GridItem';
 import { imagesHp } from '../../images/index';
 
 class HomePageGrid extends PureComponent {
+    constructor(props) {
+        super(props);
+        this.state = {
+            location: ''
+        }
+    }
     
     static propTypes = {
         imagesHp: PropTypes.array,
         readPageLocation: PropTypes.func
     };
 
-    readPageLocation = () => {
-        console.log('ECCOMI');
+    readPageLocation = (e) => {
+        this.setState({location: e.currentTarget.dataset.name});
+        this.props.getLocation(e.currentTarget.dataset.name)
+        
     }
     
     
 
     render() {
-        console.log('imagesHp :', imagesHp);
-        const { readPageLocation } = this.props
-
-        console.log('props from App: ', this.props)
-
-        return (
-            
+        return (    
             imagesHp.map((key, index) => {
                 return (
                     <div 
                         onClick={this.readPageLocation}
                         key={index}
+                        data-name={key.serie}
                     >
                     <Link 
                         to={`${key.serie}`} 
@@ -55,5 +58,11 @@ class HomePageGrid extends PureComponent {
         )
     }
 };
+function mapStateToProps(state) {
+    return state
+}
+const mapDispatchToProps = {
+    getLocation
+};
 
-export default connect()(HomePageGrid);
+export default connect(mapStateToProps, mapDispatchToProps)(HomePageGrid);
