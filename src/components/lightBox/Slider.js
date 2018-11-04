@@ -12,10 +12,6 @@ import { imagesHp } from '../../images/index';
 
 import './lightbox.css';
 
-const imagesForSlider = imagesHp.map(images => {
-    return images.imgSrc
-});
-
 class Slider extends PureComponent {
     constructor(props) {
         super(props);
@@ -23,7 +19,6 @@ class Slider extends PureComponent {
         this.state = {
             images: imagesHp.filter(object => object.serie === this.props.locationToLoad),
             currentIndex: imagesHp.filter(object => object.serie === this.props.locationToLoad).findIndex(element => element.id === this.props.imageToStart),
-            // currentIndex: 0,
             translateValue: 0
         }
     }

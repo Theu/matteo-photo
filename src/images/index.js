@@ -46,7 +46,7 @@ const imagesHp = [
         title: '06',
         imgSrc: img_06_72,
         id: 'img_06_72',
-        serie: 'newYork'
+        serie: 'crystalFrontiers'
     },
     {
         title: '07',
