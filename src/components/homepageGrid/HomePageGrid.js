@@ -14,13 +14,10 @@ import GridItem from './GridItem';
 import { imagesHp } from '../../images/index';
 
 class HomePageGrid extends PureComponent {
-    constructor(props) {
-        super(props);
-        this.state = {
-            location: '',
-            id: ''
-        }
-    }
+    state = {
+        location: '',
+        id: ''
+    };
     
     static propTypes = {
         imagesHp: PropTypes.array,
@@ -30,7 +27,7 @@ class HomePageGrid extends PureComponent {
     readPageLocation = event => {
         this.setState({location: event.currentTarget.dataset.serie});
         this.props.getLocation(event.currentTarget.dataset.serie)
-        
+        this.props.history.push(event.currentTarget.dataset.serie)
     }
 
     defineFirstImageToShow = event => {
@@ -38,8 +35,6 @@ class HomePageGrid extends PureComponent {
         this.props.getImage(event.currentTarget.dataset.id)
     }
     
-    // onClick(event)
-
     render() {
         return (    
             imagesHp.map((key, index) => {
