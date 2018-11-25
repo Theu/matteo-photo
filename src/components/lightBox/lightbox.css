@@ -1,6 +1,7 @@
 .wrapper-slider {
     position: relative;
     width: 90%;
+    max-width: 1024px;
     margin: 15px auto 0 auto;
 }
 
