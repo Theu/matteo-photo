@@ -27,7 +27,6 @@ class HomePageGrid extends PureComponent {
     readPageLocation = event => {
         this.setState({location: event.currentTarget.dataset.serie});
         this.props.getLocation(event.currentTarget.dataset.serie)
-        this.props.history.push(event.currentTarget.dataset.serie)
     }
 
     defineFirstImageToShow = event => {
