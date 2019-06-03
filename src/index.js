@@ -16,15 +16,16 @@ import './index.css'
 
 import Header from './components/Header/Header';
 import Homepage from './Homepage';
-// import CrystalFrontiers from './components/pages/CrystalFrontiers';
+
 import Gallery from './components/pages/Gallery';
-// import NewYork from './components/pages/NewYork'
+import { imagesHp } from './images/index';
 
-// import { imagesHp } from './images/index';
-// console.log('imagesHp', imagesHp)
 
-const pages = ['crystalFrontiers', 'NewYork']
 const { store, persistor } = configureStore();
+
+const pages = imagesHp.map(series => {
+    return series.serie;
+})
 
 render(
     <Provider store={store}>
@@ -34,8 +35,13 @@ render(
                     <Header />
                     <Switch>
                         <Route exact path="/" component={Homepage} />
-                        <Route path="/crystalFrontiers" component={Gallery} />
-                        <Route path="/NewYork" component={Gallery} />
+                        {
+                            pages.map((path, index) => {
+                                return (
+                                    <Route key={index} path={`/${path}`} component={Gallery} />
+                                )
+                            })
+                        }
                     </Switch>
                 </div>
             </Router>
@@ -43,4 +49,3 @@ render(
     </Provider>
     , document.getElementById('root')
 );
-// registerServiceWorker();
