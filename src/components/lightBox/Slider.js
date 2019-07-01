@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import Image from './Image';
 
 import './lightbox.css';
@@ -14,17 +14,19 @@ class Slider extends PureComponent {
         } = this.props;
         
         return (
-            <div>
-                <a className='prev' onClick={prevSlide}>&#10094;</a>    
-                    <div className='display-image'>
-                        <Image
-                            imgSrc={imgSrc}
-                            title={title}
-                            alt={alt}
-                        />
-                    </div>               
-                <a className='next' onClick={nextSlide}>&#10095;</a>
-            </div>
+            <Fragment>
+                <div className='image-wrapper'>
+                    <a className='arrow prev' onClick={prevSlide}>&#10094;</a>    
+                        <div className='display-image'>
+                            <Image
+                                imgSrc={imgSrc}
+                                title={title}
+                                alt={alt}
+                            />
+                        </div>
+                    <a className='arrow next' onClick={nextSlide}>&#10095;</a>
+                </div>
+            </Fragment>
         );
     }
 };

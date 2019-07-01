@@ -9,7 +9,14 @@ const Header = () => {
             to='/'
         >
             <div className='header-wrapper'>
-                Matteo Contini
+                <div className='header-container'>
+                    <div className='name'>
+                        Matteo Contini
+                    </div>
+                    <div className='contact'>
+                        Contact
+                    </div>                
+                </div>
             </div>
         </Link>
     );
