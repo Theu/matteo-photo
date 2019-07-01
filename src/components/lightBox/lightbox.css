@@ -1,8 +1,8 @@
 .wrapper-slider {
     position: relative;
     width: 90%;
-    max-width: 1024px;
-    margin: 15px auto 0 auto;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .image {

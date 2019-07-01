@@ -7,6 +7,7 @@ const Header = () => {
     return (
         <Link 
             to='/'
+            className='link'
         >
             <div className='header-wrapper'>
                 <div className='header-container'>

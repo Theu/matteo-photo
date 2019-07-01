@@ -6,9 +6,18 @@
 }
 
 .header-container {
-    max-width: 1024px;
+    max-width: 1300px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+}
 
+.link {
+    text-decoration: none;
+    color: #000000;
+}
+
+.name {
+    font-size: 20px;
+    text-decoration: none;
 }
