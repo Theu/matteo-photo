@@ -11,6 +11,7 @@ import {
 import LightBox from '../lightBox/LightBox';
 
 import { imagesHp } from '../../images/index';
+import './gallery.css';
 
 class Gallery extends Component {
     state = {
@@ -54,7 +55,11 @@ class Gallery extends Component {
 
         return (
             <div>
-                <p>{locationToLoad}</p>
+                <div className='header-wrapper gallery'>
+                    <div className='header-container'>
+                        {locationToLoad}
+                    </div>
+                </div>    
                 <LightBox
                     prevSlide={this.prevSlide}
                     nextSlide={this.nextSlide}
