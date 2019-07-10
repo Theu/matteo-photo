@@ -16,67 +16,67 @@ const imagesHp = [
         title: '01',
         imgSrc: img_01_72,
         id: 'img_01_72',
-        serie: 'crystalFrontiers'
+        serie: 'crystal-frontiers'
     },
     {
         title: '02',
         imgSrc: img_02_72,
         id: 'img_02_72',
-        serie: 'newYork'
+        serie: 'new-york'
     },
     {
         title: '03',
         imgSrc: img_03_72,
         id: 'img_03_72',
-        serie: 'crystalFrontiers'
+        serie: 'crystal-frontiers'
     },
     {
         title: '04',
         imgSrc: img_04_72,
         id: 'img_04_72',
-        serie: 'newYork'
+        serie: 'new-york'
     },
     {
         title: '05',
         imgSrc: img_05_72,
         id: 'img_05_72',
-        serie: 'newYork'
+        serie: 'new-york'
     },
     {
         title: '06',
         imgSrc: img_06_72,
         id: 'img_06_72',
-        serie: 'crystalFrontiers'
+        serie: 'crystal-frontiers'
     },
     {
         title: '07',
         imgSrc: img_07_72,
         id: 'img_07_72',
-        serie: 'newYork'
+        serie: 'new-york'
     },
     {
         title: '08',
         imgSrc: img_08_72,
         id: 'img_08_72',
-        serie: 'newYork'
+        serie: 'new-york'
     },
     {
         title: '09',
         imgSrc: img_09_72,
         id: 'img_09_72',
-        serie: 'newYork'
+        serie: 'new-york'
     },
     {
         title: '10',
         imgSrc: img_10_72,
         id: 'img_10_72',
-        serie: 'newYork'
+        serie: 'new-york'
     },
     {
         title: '11',
         imgSrc: img_11_72,
         id: 'img_10_72',
-        serie: 'newYork'
+        serie: 'new-york'
     }
 ];
 
