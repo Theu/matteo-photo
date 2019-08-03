@@ -52,7 +52,7 @@ class Gallery extends Component {
                 <LightBox
                     prevSlide={this.prevSlide}
                     nextSlide={this.nextSlide}
-                    imgSrc={`${imageSet[imageIndex].imgSrc}`}
+                    imgSrc={`${imageSet[imageIndex].gallerySrc}`}
                     title={imagesHp[imageIndex].title}
                     alt={imagesHp[imageIndex].title} 
                 />

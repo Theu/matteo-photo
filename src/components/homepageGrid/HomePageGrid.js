@@ -33,7 +33,7 @@ export const HomePageGrid = ({ getLocation, getImage }) => {
                     
                 >
                     <GridItem     
-                        src={key.imgSrc}
+                        src={key.homeGridSrc}
                         alt={key.title}
                         title={key.title}
                         name={key.name}
