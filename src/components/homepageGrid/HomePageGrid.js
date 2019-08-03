@@ -14,23 +14,16 @@ import GridItem from './GridItem';
 import { imagesHp } from '../../images/index';
 
 class HomePageGrid extends PureComponent {
-    state = {
-        location: '',
-        id: ''
-    };
-    
     static propTypes = {
         imagesHp: PropTypes.array,
         readPageLocation: PropTypes.func
     };
 
     readPageLocation = event => {
-        this.setState({location: event.currentTarget.dataset.serie});
         this.props.getLocation(event.currentTarget.dataset.serie)
     }
 
     defineFirstImageToShow = event => {
-        this.setState({location: event.currentTarget.dataset.id});
         this.props.getImage(event.currentTarget.dataset.id)
     }
     
@@ -65,12 +58,10 @@ class HomePageGrid extends PureComponent {
         )
     }
 };
-function mapStateToProps(state) {
-    return state
-}
+
 const mapDispatchToProps = {
     getLocation,
     getImage
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomePageGrid);
+export default connect(null, mapDispatchToProps)(HomePageGrid);

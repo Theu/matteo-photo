@@ -5,21 +5,28 @@ import './header.css';
 
 const Header = () => {
     return (
-        <Link 
-            to='/'
-            className='link'
-        >
+        
             <div className='header-wrapper'>
                 <div className='header-container'>
-                    <div className='name'>
-                        Matteo Contini
-                    </div>
-                    <div className='contact'>
-                        Contact
-                    </div>                
+                    <Link 
+                        to='/'
+                        className='link'
+                    >
+                        <div className='name'>
+                            Matteo Contini
+                        </div>
+                    </Link>    
+                    <Link 
+                        to='/contact'
+                        className='link'
+                    >    
+                        <div className='contact'>
+                            Contact
+                        </div>                
+                    </Link>
                 </div>
             </div>
-        </Link>
+        
     );
 }
 
