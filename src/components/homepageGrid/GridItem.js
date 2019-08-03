@@ -21,7 +21,7 @@ class GridItem extends PureComponent {
         } = this.props;
 
         return (
-            <div >
+            <div className='grid-item-wrapper'>
                 <img 
                     src={src} 
                     alt={alt} 
