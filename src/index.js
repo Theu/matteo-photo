@@ -16,6 +16,7 @@ import './index.css'
 
 import Header from './components/Header/Header';
 import Homepage from './Homepage';
+import Contact from './components/contact/Contact';
 
 import Gallery from './components/pages/Gallery';
 import { imagesHp } from './images/index';
@@ -35,6 +36,7 @@ render(
                     <Header />
                     <Switch>
                         <Route exact path="/" component={Homepage} />
+                        <Route path="/contact" component={Contact} />
                         {
                             pages.map((path, index) => {
                                 return (
