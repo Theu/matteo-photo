@@ -19,12 +19,12 @@ import Homepage from './Homepage';
 import Contact from './components/contact/Contact';
 
 import Gallery from './components/pages/Gallery';
-import { imagesHp } from './images/index';
+import imagesForHpAndGalleries from './images/index';
 
 
 const { store, persistor } = configureStore();
 
-const pages = imagesHp.map(series => {
+const pages = imagesForHpAndGalleries.map(series => {
     return series.serie;
 })
 

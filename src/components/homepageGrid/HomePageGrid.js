@@ -11,7 +11,7 @@ import {
 
 import GridItem from './GridItem';
 
-import { imagesHp } from '../../images/index';
+import imagesForHpAndGalleries from '../../images/index';
 
 export const HomePageGrid = ({ getLocation, getImage }) => {
     const readPageLocation = event => {
@@ -20,7 +20,7 @@ export const HomePageGrid = ({ getLocation, getImage }) => {
     }
     
     return (    
-        imagesHp.map((key, index) => {
+        imagesForHpAndGalleries.map((key, index) => {
             return (
                 <div 
                     onClick={readPageLocation}
@@ -47,7 +47,7 @@ export const HomePageGrid = ({ getLocation, getImage }) => {
 }
 
 HomePageGrid.propType = {
-    imagesHp: PropTypes.array,
+    imagesForHpAndGalleries: PropTypes.array,
     readPageLocation: PropTypes.func
 }
 
