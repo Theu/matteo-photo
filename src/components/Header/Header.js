@@ -20,7 +20,7 @@ const Header = () => {
                         to='/contact'
                         className='link'
                     >    
-                        <div className='contact'>
+                        <div className='name'>
                             Contact
                         </div>                
                     </Link>

@@ -13,51 +13,43 @@ import GridItem from './GridItem';
 
 import { imagesHp } from '../../images/index';
 
-class HomePageGrid extends PureComponent {
-    static propTypes = {
-        imagesHp: PropTypes.array,
-        readPageLocation: PropTypes.func
-    };
-
-    readPageLocation = event => {
-        this.props.getLocation(event.currentTarget.dataset.serie)
-    }
-
-    defineFirstImageToShow = event => {
-        this.props.getImage(event.currentTarget.dataset.id)
+export const HomePageGrid = ({ getLocation, getImage }) => {
+    const readPageLocation = event => {
+        getLocation(event.currentTarget.dataset.serie);
+        getImage(event.currentTarget.dataset.id);
     }
     
-    render() {
-        return (    
-            imagesHp.map((key, index) => {
-                return (
-                    <div 
-                        onClick={(event) => {
-                            this.readPageLocation(event);
-                            this.defineFirstImageToShow(event)
-                        }}
-                        key={index}
-                        data-serie={key.serie}
-                        data-id={key.id}
-                    >
-                    <Link 
-                        to={`${key.serie}`} 
-                        
-                    >
-                        <GridItem     
-                            src={key.imgSrc}
-                            alt={key.title}
-                            title={key.title}
-                            name={key.name}
-                        />
-                    </Link>
-                    </div>
-                )
-            })
-            
-        )
-    }
-};
+    return (    
+        imagesHp.map((key, index) => {
+            return (
+                <div 
+                    onClick={readPageLocation}
+                    key={index}
+                    data-serie={key.serie}
+                    data-id={key.id}
+                >
+                <Link 
+                    to={`${key.serie}`} 
+                    
+                >
+                    <GridItem     
+                        src={key.homeGridSrc}
+                        alt={key.title}
+                        title={key.title}
+                        name={key.name}
+                    />
+                </Link>
+                </div>
+            )
+        })
+        
+    )
+}
+
+HomePageGrid.propType = {
+    imagesHp: PropTypes.array,
+    readPageLocation: PropTypes.func
+}
 
 const mapDispatchToProps = {
     getLocation,
