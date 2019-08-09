@@ -10,14 +10,14 @@ import {
 
 import LightBox from '../lightBox/LightBox';
 
-import { imagesHp } from '../../images/index';
+import imagesForHpAndGalleries from '../../images/index';
 import './gallery.css';
 
 class Gallery extends Component {
     state = {
-        images: imagesHp
+        images: imagesForHpAndGalleries
             .filter(object => object.serie === this.props.locationToLoad),
-        currentIndex: imagesHp
+        currentIndex: imagesForHpAndGalleries
             .filter(object => object.serie === this.props.locationToLoad)
             .findIndex(element => element.id === this.props.imageToStart),
         translateValue: 0
@@ -53,8 +53,8 @@ class Gallery extends Component {
                     prevSlide={this.prevSlide}
                     nextSlide={this.nextSlide}
                     imgSrc={`${imageSet[imageIndex].gallerySrc}`}
-                    title={imagesHp[imageIndex].title}
-                    alt={imagesHp[imageIndex].title} 
+                    title={imagesForHpAndGalleries[imageIndex].title}
+                    alt={imagesForHpAndGalleries[imageIndex].title} 
                 />
             </div>
         );
