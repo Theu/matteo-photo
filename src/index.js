@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 
 
-// import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from './registerServiceWorker';
 import { PersistGate } from 'redux-persist/integration/react';
 import configureStore from './redux/store/configureStore';
 import { Provider } from 'react-redux';
@@ -51,3 +51,4 @@ render(
     </Provider>
     , document.getElementById('root')
 );
+registerServiceWorker();

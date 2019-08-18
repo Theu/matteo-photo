@@ -2,6 +2,7 @@
   "name": "matteo-photo",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "http://matteocontini.com/test/app",
   "dependencies": {
     "classnames": "^2.2.6",
     "react": "^16.4.2",

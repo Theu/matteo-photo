@@ -5,7 +5,7 @@ import HomePageGrid from './components/homepageGrid/HomePageGrid';
 import './homepage.css';
 
 
-class App extends PureComponent {
+class Homepage extends PureComponent {
   render() {
     return (
       <div className='container-homepage'>
@@ -17,4 +17,4 @@ class App extends PureComponent {
   }
 }
 
-export default App;
+export default Homepage;
