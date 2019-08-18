@@ -16,6 +16,7 @@ import './index.css'
 
 import Header from './components/Header/Header';
 import Homepage from './Homepage';
+import App from './App';
 import Contact from './components/contact/Contact';
 
 import Gallery from './components/pages/Gallery';
@@ -33,7 +34,7 @@ render(
         <PersistGate loading={null} persistor={persistor}>
             <Router>
                 <div>
-                    <Header />
+                    <App />
                     <Switch>
                         <Route exact path="/" component={Homepage} />
                         <Route path="/contact" component={Contact} />
